@@ -4,9 +4,10 @@
     {
         static void Main(string[] args)
         {
+
             while (true)
-            { 
-                Start:
+            {
+            Start:
                 Console.WriteLine("Welcome in team CASIO ");
                 Console.WriteLine("The Game Changer.");
                 Console.WriteLine();
@@ -18,8 +19,8 @@
                 Console.WriteLine();
                 Console.WriteLine();
                 Console.WriteLine("Konec zvonec:0");
-            
-                int funkce= Convert.ToInt32(Console.ReadLine());
+
+                int funkce = Convert.ToInt32(Console.ReadLine());
 
                 if (funkce == 0)
                 {
@@ -43,7 +44,7 @@
                         Console.WriteLine("Zadej druhé číslo");
                         double plus2 = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine("Výsledek:" +(plus1+plus2));
+                        Console.WriteLine("Výsledek:" + (plus1 + plus2));
                         Console.WriteLine();
                         Console.WriteLine("______________________________");
 
@@ -71,7 +72,7 @@
                         Console.WriteLine("Zadej druhé číslo");
                         double krat2 = Convert.ToDouble(Console.ReadLine());
 
-                        Console.WriteLine("Výsledek"+krat1 * krat2);
+                        Console.WriteLine("Výsledek" + krat1 * krat2);
                         Console.WriteLine();
                         Console.WriteLine("______________________________");
 
@@ -88,7 +89,7 @@
                         if (del1 == 0 || del2 == 0)
                         {
                             Console.WriteLine("Nelze dělit nulou");
-                            
+
                         }
                         else
                         {
@@ -123,6 +124,17 @@
 
                 }
             }
+        }
+        int cislo = ZadaniCisla("Zadejte prosím číslo: ");
+        public static int ZadaniCisla(string zadani)
+        {
+            int result;
+            Console.WriteLine(zadani);
+            while (!int.TryParse(Console.ReadLine(), out result))
+            {
+                Console.WriteLine("Zadejte prosim cele cislo.");
+            }
+            return result;
         }
     }
 }
