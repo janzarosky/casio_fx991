@@ -40,9 +40,9 @@
                     case 1:
                         Console.WriteLine("Vybral jsi funkci sčítání,SKVĚLE!!!");
                         Console.WriteLine("Zadej první číslo");
-                        double plus1 = Convert.ToDouble(Console.ReadLine());      /*  double(místo int) umožní napsat desetiné číslo*/
+                        int plus1 = ZadaniCisla("");      /*  double(místo int) umožní napsat desetiné číslo*/
                         Console.WriteLine("Zadej druhé číslo");
-                        double plus2 = Convert.ToDouble(Console.ReadLine());
+                        int plus2 = ZadaniCisla(""); ;
 
                         Console.WriteLine("Výsledek:" + (plus1 + plus2));
                         Console.WriteLine();
@@ -54,9 +54,9 @@
                     case 2:
                         Console.WriteLine("Vybral jsi funkci odčítání,SKVĚLE!!!");
                         Console.WriteLine("Zadej první číslo");
-                        double minus1 = Convert.ToDouble(Console.ReadLine());
+                        int minus1 = ZadaniCisla("");
                         Console.WriteLine("Zadej druhé číslo");
-                        double minus2 = Convert.ToDouble(Console.ReadLine());
+                        int minus2 = ZadaniCisla("");
 
                         Console.WriteLine("Výsledek: " + (minus1 - minus2));
                         Console.WriteLine();
@@ -68,9 +68,9 @@
                     case 3:
                         Console.WriteLine("Vybral jsi funkci násobení,SKVĚLE!!!");
                         Console.WriteLine("Zadej první číslo");
-                        double krat1 = Convert.ToDouble(Console.ReadLine());
+                        int krat1 = ZadaniCisla("");
                         Console.WriteLine("Zadej druhé číslo");
-                        double krat2 = Convert.ToDouble(Console.ReadLine());
+                        int krat2 = ZadaniCisla("");
 
                         Console.WriteLine("Výsledek" + krat1 * krat2);
                         Console.WriteLine();
@@ -82,9 +82,9 @@
                     case 4:
                         Console.WriteLine("Vybral jsi funkci dělení,SKVĚLE!!!");
                         Console.WriteLine("Zadej první číslo");
-                        double del1 = Convert.ToDouble(Console.ReadLine());
+                        int del1 = ZadaniCisla("");
                         Console.WriteLine("Zadej druhé číslo");
-                        double del2 = Convert.ToDouble(Console.ReadLine());
+                        int del2 = ZadaniCisla("");
 
                         if (del1 == 0 || del2 == 0)
                         {
@@ -103,9 +103,9 @@
                     case 5:
                         Console.WriteLine("Vybral jsi funkci největší společný násobek,SKVĚLE!!!");
                         Console.WriteLine("Zadej první číslo");
-                        int nsd1 = Convert.ToInt32(Console.ReadLine());
+                        int nsd1 = ZadaniCisla("");
                         Console.WriteLine("Zadej druhé číslo");
-                        int nsd2 = Convert.ToInt32(Console.ReadLine());
+                        int nsd2 = ZadaniCisla("");
                         while (nsd2 != 0)
                         {
                             int temp = nsd2;
