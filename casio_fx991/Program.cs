@@ -20,14 +20,21 @@
                 Console.WriteLine();
                 Console.WriteLine("Konec zvonec:0");
 
-                int funkce = Convert.ToInt32(Console.ReadLine());
+                
+                string volbaText = Console.ReadLine();
+                int volba;
+                if (!int.TryParse(volbaText, out volba))
+                {
+                    Console.WriteLine("Neplatná volba.");
+                    continue;
+                }
 
-                if (funkce == 0)
+                if (volba == 0)
                 {
                     break;
                 }
 
-                switch (funkce)
+                switch (volba)
                 {
                     case 0:
                         Console.Clear();
@@ -86,10 +93,9 @@
                         Console.WriteLine("Zadej druhé číslo");
                         int del2 = ZadaniCisla("");
 
-                        if (del1 == 0 || del2 == 0)
+                        if (del2 == 0)
                         {
-                            Console.WriteLine("Nelze dělit nulou");
-
+                            Console.WriteLine("Nelze dělit nulou.");
                         }
                         else
                         {
